@@ -61,8 +61,7 @@ public class Exercises {
         int x = s.indexOf("<"+tag+">");
         int y = s.indexOf("</"+tag+">");
         if(x != -1 && y != -1 && x<y){
-            return s.substring(0,x) + s.substring(x+3,y) + s.substring(y+4);
-            //return (s.substring(x+3,y));
+            return (s.substring(x+3,y));
         }
         else {
             return s;
