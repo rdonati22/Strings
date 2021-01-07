@@ -6,16 +6,17 @@ public class ErrorLog {
     private String description;
 
     /** Precondition: message is a valid Error log entry */
+    //part a
     public ErrorLog(String message) {
         int colon = message.indexOf(":");
         machineId = message.substring(0,colon);
         description = message.substring(colon+1);
-        /* part a */
     }
 
     /** Returns true if the description in this error log entry
      * contains keyword; false otherwise.
      */
+    //part b
     public boolean containsKey(String keyword) {
         int key = description.indexOf(keyword);
         int len1 = keyword.length();
@@ -29,8 +30,7 @@ public class ErrorLog {
             }
             return (description.charAt(key-1) == (' ') && description.charAt(key+len1) == (' '));
         }
-        /* part b */
-        return false;   // replace this
+        return false;
     }
 
 
@@ -51,8 +51,5 @@ public class ErrorLog {
         System.out.println("message 4 " + er4.containsKey("disk"));
         System.out.println("message 5 " + er5.containsKey("disk"));
         System.out.println("message 6 " + er6.containsKey("disk"));
-
-
     }
-
 }
